@@ -1,9 +1,7 @@
 
 /**
- * Write a description of class SimpleCalcRunner here.
- * 
- * amariet (August 23, 2016) 
- * @version (a version number or a date)
+ * Amanda Torres 
+ * August 23, 2016
  */
 public class SimpleCalcRunner
 {
