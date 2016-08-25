@@ -16,8 +16,7 @@ public class FirstClass
    
     public int addEmUp()
     {
-  
-        return a + b;
+    return a + b;
     } 
     
     public int difference()
