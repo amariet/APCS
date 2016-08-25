@@ -9,7 +9,7 @@ public class FactCalc
     
     public FactCalc()
     {
-        int n = 12
+        n = 12;
     }
 
     public int factorial()
