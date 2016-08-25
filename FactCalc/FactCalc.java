@@ -1,33 +1,30 @@
 
 /**
- * Write a description of class FactCalc here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Amanda Torres
+ * August 25, 2016
  */
 public class FactCalc
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class FactCalc
-     */
+    private int n;
+    
     public FactCalc()
     {
-        // initialise instance variables
-        x = 0;
+        n = x;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
+    public int factorial()
     {
-        // put your code here
-        return x + y;
+        int number = n;
+        int result  = 1;
+        while (number > 0)
+        {
+            result = result * number;
+            number --;
+        }
+        return result;
+    }
+    public int self()
+    { 
+        return n;
     }
 }
