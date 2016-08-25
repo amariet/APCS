@@ -10,7 +10,5 @@ public class FactCalcRunner
     {
         FactCalc myNumber = new FactCalc(5);
         System.out.println("The factorial of " + myNumber.self() + " is: " + myNumber.factorial());
-
-        
     }
 }
