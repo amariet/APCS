@@ -1,19 +1,13 @@
 
 /**
- * Write a description of class FirstClass here.
- * 
  * Amanda Torres  
- * @version (a version number or a date)
+ * August 22, 2016
  */
 public class FirstClass
 {
-    // instance variables - replace the example below with your own
     private int a;
     private int b;
 
-    /**
-     * Constructor for objects of class FirstClass
-     */
     public FirstClass()
     {
    
@@ -27,7 +21,7 @@ public class FirstClass
         
     } 
     
-    public int difference (){
+    public int difference(){
     return a - b;
     
     
