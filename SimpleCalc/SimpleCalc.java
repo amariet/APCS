@@ -1,9 +1,7 @@
 
 /**
- * Write a description of class SimpleCalc here.
- * 
  * Amanda Torres 
- * @version (a version number or a date)
+ * August 23, 2016
  */
 public class SimpleCalc
 {
