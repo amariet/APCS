@@ -1,9 +1,7 @@
 
 /**
- * Write a description of class FirstClassRunner here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Amanda Torres
+ * August 22, 2016
  */
 public class FirstClassRunner
 {
