@@ -23,7 +23,7 @@ public class FactCalc
         }
         return result;
     }
-    public int self()
+    public int call()
     { 
         return n;
     }
