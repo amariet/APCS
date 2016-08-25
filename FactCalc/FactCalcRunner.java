@@ -1,33 +1,15 @@
 
 /**
- * Write a description of class FactCalcRunner here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ *Amanda Torres
+ * August 25, 2016
  */
 public class FactCalcRunner
 {
-    /**
-     * Constructor for objects of class FactCalcRunner
-     */
-    public static void main (String[] args){
-        FactCalc fc = new FactCalc();
-        System.out.println("
-        
-    }
-        // initialise instance variables
-        x = 0;
-    }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
+    public static void main (String[] args)
     {
-        // put your code here
-        return x + y;
+        FactCalc myNumber = new FactCalc(5);
+        System.out.println("The factorial of " + myNumber.self() + "is" + myNumber.factorial());
+        
     }
 }
