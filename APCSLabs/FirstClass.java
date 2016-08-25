@@ -10,20 +10,18 @@ public class FirstClass
 
     public FirstClass()
     {
-   
         a = 2;
         b = 5;
     }
    
-    public int addEmUp(){
+    public int addEmUp()
+    {
   
         return a + b;
-        
     } 
     
-    public int difference(){
+    public int difference()
+    {
     return a - b;
-    
-    
-}
+    }
 }
