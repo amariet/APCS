@@ -1,6 +1,6 @@
 
 /**
- *Amanda Torres
+ * Amanda Torres
  * August 25, 2016
  */
 public class FactCalcRunner
