@@ -1,0 +1,6 @@
+/*
+* Amanda Torres
+* August 26, 2016
+*/
+public void walkMaze (MazeBot mazeBot) {
+while (mazebot.didNotReachGoal()) {
