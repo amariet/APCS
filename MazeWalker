@@ -1,6 +1,100 @@
-/*
-* Amanda Torres
-* August 26, 2016
-*/
-public void walkMaze (MazeBot mazeBot) {
-while (mazebot.didNotReachGoal()) {
+ /*
+ * Amanda Torres 
+ * August 23, 2016
+ */
+ //Activity 4
+public void mazeWalker (MazeBot mazeBot) 
+{
+   while (mazeBot.canMoveForward()) 
+   {
+     mazeBot.moveForward();
+   }
+  
+   mazeBot.turnLeft();
+  
+   while (mazeBot.canMoveForward()) 
+   {
+     mazeBot.moveForward();
+   }
+   
+   mazeBot.turnRight();
+   
+   while (mazeBot.canMoveForward()) 
+   {
+     mazeBot.moveForward();
+   }
+   
+    mazeBot.turnRight();
+    
+    while (mazeBot.canMoveForward()) 
+    {
+     mazeBot.moveForward();
+   }
+   
+   mazeBot.turnLeft();
+   
+    while (mazeBot.canMoveForward()) 
+    {
+     mazeBot.moveForward();
+   }
+   
+   mazeBot.turnLeft();
+   
+   while (mazeBot.canMoveForward()) 
+   {
+     mazeBot.moveForward();
+   }
+   
+    mazeBot.turnRight();
+    
+     while (mazeBot.canMoveForward()) 
+     {
+     mazeBot.moveForward();
+   }
+   
+   if (mazeBot.didReachGoal()) 
+   {
+      mazeBot.signalSuccess();
+      }
+   
+   else {
+      mazeBot.signalError();
+      }
+   }
+
+//Activity 2 & 3
+public void mazeWalker (MazeBot mazeBot) 
+{
+    mazeBot.moveForward();
+    mazeBot.moveForward();
+    mazeBot.turnLeft();
+    mazeBot.moveForward();
+    mazeBot.moveForward();
+    mazeBot.moveForward();
+    mazeBot.turnRight();
+    mazeBot.moveForward();
+    mazeBot.moveForward();
+    mazeBot.turnRight();
+    mazeBot.moveForward();
+    mazeBot.moveForward();
+    mazeBot.moveForward();
+    mazeBot.moveForward();
+    mazeBot.turnLeft();
+    mazeBot.moveForward();
+    mazeBot.moveForward();
+    mazeBot.moveForward();
+    mazeBot.turnLeft();
+    mazeBot.moveForward();
+    mazeBot.moveForward();
+    mazeBot.turnRight();
+    mazeBot.moveForward();
+    mazeBot.moveForward();
+    }
+  if (mazeBot.didReachGoal()) {
+      mazeBot.signalSuccess();
+      }
+   
+   else {
+      mazeBot.signalError();
+    }
+   }
