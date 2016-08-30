@@ -1,4 +1,44 @@
- /*
+/**
+ *Amanda Torres
+ *August 24, 2016
+ */
+public class MazeWalker
+{
+    public static void run(){
+        Maze maze = new Maze();
+        MazeWalker mazeWalker = new MazeWalker();
+        mazeWalker.walkMaze(maze.getMazeBot());
+    }
+    public void walkMaze(MazeBot mazeBot){
+        while (mazeBot.didNotReachGoal())
+        {
+            if(mazeBot.canMoveForward())
+            { 
+                mazeBot.moveForward();
+            } 
+            else 
+            {
+                mazeBot.turnLeft();
+                if(mazeBot.canMoveForward())
+                {
+                    mazeBot.turnRight();
+                    mazeBot.turnRight();
+                }
+            }
+        }
+        if(mazeBot.didReachGoal())
+        {
+            mazeBot.signalSuccess();
+        }
+        else
+        {
+            mazeBot.signalError();
+        }
+    }
+} 
+
+
+/*
  * Amanda Torres 
  * August 23, 2016
  */
