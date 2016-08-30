@@ -9,6 +9,7 @@ public class MazeWalker
         MazeWalker mazeWalker = new MazeWalker();
         mazeWalker.walkMaze(maze.getMazeBot());
     }
+
     public void walkMaze(MazeBot mazeBot){
         while (mazeBot.didNotReachGoal())
         {
@@ -19,13 +20,14 @@ public class MazeWalker
             else 
             {
                 mazeBot.turnLeft();
-                if(mazeBot.canMoveForward())
+                if(!mazeBot.canMoveForward())
                 {
                     mazeBot.turnRight();
                     mazeBot.turnRight();
                 }
             }
         }
+        
         if(mazeBot.didReachGoal())
         {
             mazeBot.signalSuccess();
@@ -35,8 +37,7 @@ public class MazeWalker
             mazeBot.signalError();
         }
     }
-} 
-
+}
 
 /*
  * Amanda Torres 
