@@ -1,0 +1,41 @@
+/**
+ * Amanda Torres
+ * September 01, 2016
+ */
+public class BallRunner
+{
+       private int[] ballWorld;
+       private int[] entrancePoint;
+       private int[] ballBotArray;
+       
+       public void run() {
+               BallWorld ballWorld = new BallWorld( 200 , 200 );
+               TGPoint startPoint = new TGPoint( 0 , 0 );
+               BallBot ballBot = new BallBot(ballWorld, startPoint, 90 , 30 );
+               while(0 == 0) {
+                   if (ballBot.canMoveForward(ballWorld){
+                       ballBot.moveForward();
+                   }
+                   else {
+                       double ball1 = ballbot.getHeading() + 120;
+                       if(ball1 > 360) {
+                        ball1 = ball1%360;
+                       }
+                       ballBot.setHeading(ball1);
+                       return ball1;
+                   }
+              } 
+       }
+       
+       public BallRunner(ballWorld, entrancePoint, ballBotArrayLength) {
+             ballWorld = ballWorld;
+             entrancePoint = entrancePoint;
+             ballBotArray = new int[];
+       }
+       
+       public int findFreeBallBotIndex() { 
+             for(){
+             }
+       }
+  }
+  
