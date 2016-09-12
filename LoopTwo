@@ -1,1 +1,49 @@
+LoopTwoRunner:
 
+/**
+ * Amanda Torres
+ * September 12, 2016
+ */
+public class LoopTwoRunner
+{ 
+    public static void main( String[] args ) 
+    {
+    
+    
+    }
+}
+
+LoopTwo:
+
+/**
+ * Amanda Torres
+ * September 12, 2016
+ */
+
+import java.util.Arrays;
+public class LoopTwo
+{
+    int[] array = new int[];
+    
+    public LoopTwo()
+    {
+        n = 100
+    }
+    
+    public int loadRandom()
+    {
+    }
+    
+    public int printArray()
+    {
+    }
+    
+    public int sortArraay()
+    {
+    }
+    
+    public int findAverage()
+    {
+    }
+    
+}
