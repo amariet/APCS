@@ -1,0 +1,41 @@
+/**
+ * Amanda Torres
+ * September 09, 2016
+ */
+public class LoopOneRunner
+{
+    public static void main (String[] args)
+    {
+        int LoopOne[] myLoop = new LoopOne[]
+        System.out.print(myLoop.loadArray);
+    
+    }
+}
+
+
+LoopOne :
+
+/**
+ * Amanda Torres
+ * September 09 ,2016
+ * LoopOne lab
+ */
+public class LoopOne
+{
+    int[] myLoop = new int[10];
+
+    public LoopOne()
+    {
+    }
+
+    public int loadArray(){
+        for(int i = 5; i < myLoop.length; i++){
+            myLoop[i] = i % 5;
+        }
+        return 
+    }
+    
+    public int printArray(){
+        return myLoop;
+    }
+}
