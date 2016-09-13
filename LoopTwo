@@ -6,15 +6,18 @@ LoopTwoRunner:
  */
 public class LoopTwoRunner
 {
+    public static void main(String args)
+    {
     LoopTwo myLoop = new LoopTwo(100);
     myLoop.loadRandom();
     myLoop.printArray();
     myLoop.sortArray();
     System.out.println("The average is: " + myLoop.findAverage());
-    System.out.println
-    System.out.println
-    System.out.println
-    System.out.println
+    System.out.println();
+    System.out.println();
+    System.out.println();
+    System.out.println();
+    }
 }
 
 LoopTwo:
