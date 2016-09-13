@@ -1,0 +1,73 @@
+LoopTwoRunner:
+
+/**
+ * Amanda Torres
+ * September 12, 2016
+ */
+public class LoopTwoRunner
+{
+    LoopTwo myLoop = new LoopTwo(100);
+    myLoop.loadRandom();
+    myLoop.printArray();
+    myLoop.sortArray();
+    System.out.println("The average is: " + myLoop.findAverage());
+    System.out.println
+    System.out.println
+    System.out.println
+    System.out.println
+}
+
+LoopTwo:
+
+/**
+ * Write a description of class LoopTwo here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+import java.util.Arrays;
+
+public class LoopTwo extends LoopTwoRunner
+{
+   private int array[];
+   
+   public LoopTwo(int a)
+   {
+      array  = new int[a]; 
+   }
+   
+   public void loadRandom()
+   {
+       for(int i = 0; i < array.length; i++) 
+       {
+           array[i] = (int)(Math.random()*100)+1;
+       }
+   }
+   
+   public void printArray()
+   {
+       for(int i = 0; i < array.length; i++)
+       {
+         if(1%10 == 0) 
+         {
+             System.out.println();
+         }
+         System.out.print(array[i] + "/t");
+       }
+   }
+   
+   public void sortArray()
+   {
+       Arrays.sort(array);
+   }
+   
+   public double findAverage()
+   {
+       double average = 0;
+       for(int i = 0; i < array.length; i++)
+       {
+           average = average + array[i];
+       }
+       return average / array.length;
+   }
+}
