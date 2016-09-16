@@ -1,0 +1,88 @@
+StatLabRunner:
+/**
+ * Amanda Torres
+ * September 14, 2016
+ */
+public class StatLabRunner
+
+{ 
+    public static void main(String[] args){
+    StatLab sl = new StatLab(100);
+    sl.loadRandom();
+    sl.printArray();
+    sl.sortArray();
+    System.out.println();
+    System.out.println();
+    System.out.println("The average is: " + sl.findAverage());
+    System.out.println();
+    System.out.println("The mean is: " + sl.getMedian());
+    System.out.println();
+    System.out.println("The mode is: " + sl.getMode());
+}
+}
+
+StatLab:
+/**
+ * Amanda Torres
+ * September 14, 2016
+ */
+import java.util.Arrays;
+
+public class StatLab extends StatLabRunner
+{
+   private int array[];
+   
+   public StatLab(int a)
+   {
+      array  = new int[a]; 
+   }
+   
+   public double getMedian()
+   {
+       if(array.length%2 == 0) 
+       {
+           return array[array.length / 2] + array[(array.length / 2) - 1]/2;
+       } else {
+           return (double)(array[array.length / 2]);
+       }
+   }
+   
+   public int getMode()
+   {
+   }
+   
+    public void loadRandom()
+   {
+       for(int i = 0; i < array.length; i++) 
+       {
+           array[i] = (int)(Math.random()*100)+1;
+       }
+   }
+   
+   public void printArray()
+   {
+       for(int i = 0; i < array.length; i++)
+       {
+         if(i%10 == 0) 
+         {
+             System.out.println();
+         }
+         System.out.print(array[i] + "\t");
+       }
+   }
+   
+   public void sortArray()
+   {
+       Arrays.sort(array);
+   }
+   
+   public double findAverage()
+   {
+       double average = 0;
+       for(int i = 0; i < array.length; i++)
+       {
+           average = average + array[i];
+       }
+       return average / array.length;
+   }
+}
