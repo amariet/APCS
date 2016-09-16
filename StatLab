@@ -50,10 +50,14 @@ public class StatLab extends StatLabRunner
    public int getMode()
    {
        int mode = array
-       int 
+       int number 1 = 0
        for(int i = 0; i < array.length; i++)
-         if() {
+         if(number == array[]) {
+           return 
+         } else {
+           return
          }
+         return 
    }
    
     public void loadRandom()
