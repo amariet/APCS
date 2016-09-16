@@ -4,11 +4,11 @@
  */
 public class BallRunner
 {
-       private static BallWord ballWorld;
-       private static TGPointentrancePoint;
+       private static BallWorld ballWorld;
+       private static TGPoint entrancePoint;
        private static BallBot[] ballBotArray;
        
-       public BallRunner( Ballworld bw, TGPoint entPoint, int ballBotArrayLength) 
+       public BallRunner( BallWorld bw, TGPoint entPoint, int ballBotArrayLength) 
        {
              ballWorld = bw;
              entrancePoint = entPoint;
@@ -17,10 +17,31 @@ public class BallRunner
        
        public int findFreeBallBotIndex() 
        { 
-             for(int i = 0; i < ballBotArray.length; i ++)
+             for(int i = 0; i < ballBotArray.length; i++)
              {
-                 if{}
+                 if(ballBotArray[i] == null)
+                 {
+                     return i;
+                 }
              }
+             return ballBotArray.length;
+       }
+       
+       public static void run()
+       {
+           BallWorld ballWorld = new BallWorld( 200 , 200 );
+           TGPoint entrancePoint = new TGPoint(0 , 0);
+           BallRunner ballBotRunner = new ballRunner(ballWorld, startPoint, 10);
+           while(true)
+           {
+               int findFreeBallBotIndex = ballBotRunner.findFreeBallBotIndex();
+               if(freeBallBotIndex < ballBotArray.length){
+                   
+               }
+               else {
+                   
+               }
+           }
        }
        
        public static void activity1()
