@@ -12,11 +12,9 @@ public class LoopTwoRunner
     myLoop.loadRandom();
     myLoop.printArray();
     myLoop.sortArray();
+    System.out.println();
+    System.out.println();
     System.out.println("The average is: " + myLoop.findAverage());
-    System.out.println();
-    System.out.println();
-    System.out.println();
-    System.out.println();
     }
 }
 
@@ -55,7 +53,7 @@ public class LoopTwo extends LoopTwoRunner
          {
              System.out.println();
          }
-         System.out.print(array[i] + "/t");
+         System.out.print(array[i] + "\t");
        }
    }
    
