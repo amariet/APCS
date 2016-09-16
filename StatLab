@@ -49,6 +49,11 @@ public class StatLab extends StatLabRunner
    
    public int getMode()
    {
+       int mode = array
+       int 
+       for(int i = 0; i < array.length; i++)
+         if() {
+         }
    }
    
     public void loadRandom()
