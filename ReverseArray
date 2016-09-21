@@ -22,9 +22,10 @@ public class ReverseArray
         nums[9]
     }
 
-    public int[] sampleMethod(int a)
+    public int[] sampleMethod(int[] a)
     {
-        int reverse = new int[a.length]
-        
+        int[] reverse = new int[a.length]
+        reverse = {nums[9], nums[8], nums[7], nums[6], nums[5], nums[4], nums[3], nums[2], nums[1], nums[0]};
+        return reverse;
     }
 }
