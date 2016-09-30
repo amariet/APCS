@@ -1,1 +1,76 @@
+Runner:
 
+/**
+ * Amanda Torres
+ * September 27, 2016
+ */
+
+public class StatLab2DRunner
+{
+    public static void main(String[] args)
+    {
+        int[][] woop = new int[3][4];
+        StatLab2D woopWoop = new StatLab2D(woop);
+        System.out.print("The Original Array Is: ");
+        woopWoop.loadArray2D();
+        woopWoop.printArray2D();
+        System.out.println("The Mean Is: " + woopWoop.getMean2D());
+        woopWoop.sortArray2D();
+        woopWoop.printArray2D();
+    }
+
+Class:
+
+/**
+ * Amanda Torres
+ * September 27, 2016
+ */
+import java.util.Arrays;
+
+public class StatLab2D extends StatLab2DRunner
+{
+   private int[][] trash;
+   
+   public StatLab2D(int[][] potato)
+   {
+      trash = potato; 
+   }
+   
+    public void loadArray2D()
+   {
+       for(int r = 0; r < trash.length; r++) 
+       {
+          for(int c = 0; c < trash[r].length; c++)
+          {
+              trash[r][c] = (int)(Math.random()*10)+1;
+          }
+       }
+   }
+   
+   public void printArray2D()
+   {
+       for(int r = 0; r < trash.length; r++)
+       {
+          System.out.print("/n");
+          for(int c = 0; c < trash[r].length; c++);
+          {
+              System.out.print(trash[r][c] + " ");
+          }
+       }
+   }
+   
+   public void sortArray2D()
+   {
+       Arrays.sort(array);
+   }
+   
+   public double getMean2D()
+   {
+       double average = 0;
+       for(int i = 0; i < array.length; i++)
+       {
+           average = average + array[i];
+       }
+       return average / array.length;
+   }
+}
