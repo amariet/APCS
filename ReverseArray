@@ -3,29 +3,44 @@
  * Amanda Torres
  * September 21, 2016
  */
+
+import java.util.Arrays;
 public class ReverseArray
 {
-    
-    private int[] nums = new int[10];
-
+   
     public ReverseArray(nums)
     {
-        nums[0] = 9
-        nums[1]
-        nums[2]
-        nums[3]
-        nums[4]
-        mums[5]
-        nums[6]
-        nums[7]
-        nums[8]
-        nums[9]
+        int[] nums = new int[11];
+        System.out.print("The length of the array is: " + nums);
+        for(int i = 0; i < nums.length,; i++)
+        {
+            nums[i] = i;
+        }
+        
+        int[] potato = reverseArray(nums);
+        System.out.println("The Original Array is: ");
+        for(int i = 0; i < nums.length; i++)
+        {
+            System.out.print(nums[i] + " ");
+        }
+        System.out.println("The Reversed Array is: ");
+        for(int i = 0; i < nums.length; i++)
+        {
+            System.out.print(potato[i] + " ");
+        }
     }
-
-    public int[] sampleMethod(int[] a)
+    public static void main (String[] args)
+    {
+        ReverseArray ra = new ReverseArray();
+        
+    }
+    public int[] reverseArray (int[] a)
     {
         int[] reverse = new int[a.length]
-        reverse = {nums[9], nums[8], nums[7], nums[6], nums[5], nums[4], nums[3], nums[2], nums[1], nums[0]};
+        for(int i = 0; i < a.length; i++)
+        {
+            reverse[i] = a[a.length - 1 - i];
+        }
         return reverse;
     }
 }
