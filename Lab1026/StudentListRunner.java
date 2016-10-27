@@ -7,12 +7,15 @@ public class StudentListRunner
 {
     public static void main(String[] args)
     {
-        String ans = "yes";
-        StudList studList = new StudList();
         Scanner scr = new Scanner(System.in);
-        while(ans.equals("no"))
+        String[] menu = new String[1];
+        StudList studList = new StudList(3);
+        menu[0] = "Add a student";
+        String ans = "";
+        System.out.print("Choose an option from the menu by typing its corresponding number.");
+        while(ans.equals("quit"))
         {
-            System.out.print():
+            System.out.print();
             ans = scr.next
         }
     }
