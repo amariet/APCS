@@ -4,14 +4,15 @@
  */
 public class StudentList
 {
-    Student students = new Student[3];
+    private Student[] students;
 
-    public StudentList()
+    public StudentList(int numberOfStudents)
     {
+        students = new Student(numberOfStudents);
     }
     
-    public void addStudent(Student s, int i,)
+    public void addStudent(Student s, int index,)
     {
-        Student
+        students[index] = s;
     }
 }
