@@ -5,27 +5,55 @@
 public class StudentList
 {
     private Student[] students;
+    private Student[] list;
 
-    public StudentList(int numberOfStudents)
+    public StudentList(Student stu1, Student stu2, Student stu3)
     {
-        students = new Student[numberOfStudents];
+        students = new Student[](stu1, stu2, stu3);
     }
     
-    public void addStudent(Student stu)
+    public int length()
     {
-        int ans = -1;
-        for(int i = students.length - 1; i >= 0; i--)
+        return students.length;
+    }
+    
+    public Student getStudentList(int num)
+    {
+        return students[num];
+    }
+    
+    public void addStudent(Student student)
+    {
+        list = new Student[list.length + 1];
+        for(int i = 0; i < list.length; i++)
         {
-            if(students[i] == null)
-            {
-                ans = i;
-            }
+            list[i] = students[i];
         }
-        students[ans] = stu;
+        list[students.length] = student;
+        students = list;
     }
     
-    public Student[] getStudentList()
+    public void delete(int deleteStudentList)
     {
-        return students;
+        list = new Student[list.length - 1];
+        for(int i = 0; i < deleteStudentList.length; i++)
+        {
+            list[i] = students[i];
+        }
+        for(int = deleteStudentList.length; i < list.length; i++)
+        {
+            list[i] = students[i];
+        }
+        students = list;
+    }
+    
+    public void print()
+    {
+        for(int i = 0; i < students.length; i++)
+        {
+            System.out.println("Name: " + students[i].getName());
+            System.out.println("ID: " + students[i].getID());
+            System.out.println("GPA: " + students[i].getGPA());
+        }
     }
 }
