@@ -6,23 +6,40 @@ public class Student
 {
     private int stuID;
     private double stuGPA;
-    private String stuName;
-
+    private String firstName;
+    private String middleName;
+    private String lastName;
+    
     public Student(int id, double gpa, String name)
     {
         stuID = id;
         stuGPA = gpa;
-        stuName = name;
+        firstName = name;
     }
     
-    public void setName(String name)
+    public String getCompleteName()
     {
-        stuName = name;
+        return lastName + ", " + firstName + " " + middleName;
     }
     
-    public String getName()
+    public void setFirstName(String name)
     {
-        return stuName;
+       firstName = name;
+    }
+    
+     public void setMiddleName(String name)
+    {
+       middleName = name;
+    }
+    
+     public void setLastName(String name)
+    {
+       lastName = name;
+    }
+    
+    public String getFirstName()
+    {
+        return firstName;
     }
     
     public void setGPA(double gpa)
