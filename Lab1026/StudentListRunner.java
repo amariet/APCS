@@ -11,52 +11,72 @@ public class StudentListRunner
         Scanner scr = new Scanner(System.in);
         StudentList sl = new StudentList();
         int nums = menuNumber();
-        
+        String ans = "";
         while(nums != -1)
-        {            
+        {   
+
             if(nums == 1)
             {
                 sl.addStudentToList();
+                System.out.print("\n");
             }
-            
+
             if(nums == 2)
             {
                 System.out.println("Student List !");
                 sl.printStudentList();
+                System.out.print("\n");
             }
-            
+
             if(nums > 2)
             {
-                System.out.print("I haven't gotten that far yet, you're just going to have to wait :/");
+                System.out.print("I haven't gotten that far yet, you're just going to have to wait :/ \n");
+                System.out.print("\n");
             }
-            
+            String s = scr.nextLine();
             nums = menuNumber();
         }
     }
-    
+
     public static int menuNumber()
     {
         Scanner scr = new Scanner(System.in);
-        String[] menu = new String[1];
+        String[] menu = new String[3];
         menu[0] = "Add a student !";
         menu[1] = "Print Student List !";
+        menu[2] = "Delete Student !";
         
-        System.out.println("Choose an option from the menu by typing its corresponding number !");
+        System.out.println("Choose an option from the menu by typing its corresponding number or just type 'quit' to quit :( !");
         for(int i = 0; i < menu.length; i++)
         {
             System.out.println(i + 1 + " " + menu[i]);
         }
-        
-        System.out.println("Please select an option: ");
-        int num = scr.nextInt();
-        if(num > 0 && num <= menu.length)
+        boolean ayylmao = true;
+        while(ayylmao)
         {
-            return num;
+            if(scr.hasNext("quit"))
+            {
+                return -1;
+            }
+            else if(scr.hasNextInt())
+            {
+                int num = scr.nextInt();
+                if(num > 0 && num <= menu.length)
+                {
+                    return num;
+                }
+                else
+                {
+                    System.out.println("Uhh, that's not an option :/");
+                    return -1;
+                }
+            }
+            else
+            {
+                System.out.println("Uhh, that's not an option :/");
+                String terminate = scr.nextLine();
+            }
         }
-        else
-        {
-            System.out.println("Uhh, that's not an option :/");
-            return -1;
-        }
+        return -1;
     }
 }
