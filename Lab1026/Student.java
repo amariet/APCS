@@ -40,7 +40,7 @@ public class Student
             if(str.indexOf(" ", str.indexOf(" ") + 1) > -1) // then have to check if there is a middle name (First Middle Last)
             {
                 int space = str.indexOf(" ", str.indexOf(" ") + 1); // the SECOND space in the string (after middle name)
-                middleName = str.substring(str.indexOf(" ") + 1, space); // starts at the beginning of middle name up unntil the second space
+                middleName = str.substring(str.indexOf(" ") + 1, space); // starts at the beginning of middle name up until the second space
                 lastName = str.substring(space + 1); // starts at the second space - ends after last index
             }
             else // if there is not middle name, it is a First Last scenario
