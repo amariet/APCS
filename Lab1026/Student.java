@@ -1,6 +1,6 @@
 /**
  * Amanda Torres
- * October 26, 2016
+ * November 21, 2016
  */
 public class Student
 {
