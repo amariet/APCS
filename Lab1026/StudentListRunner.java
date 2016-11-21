@@ -1,6 +1,6 @@
 /**
  * Amanda Torres
- * October 26, 2016
+ * November 21, 2016
  */
 import java.util.Scanner;
 import java.util.Arrays;
@@ -27,8 +27,14 @@ public class StudentListRunner
                 sl.printStudentList();
                 System.out.print("\n");
             }
-
-            if(nums > 2)
+            
+            if(nums == 3)
+            {
+                System.out.print("Delete a student ! Enter a last name or an ID: ");
+                sl.deleteStudentFromList(scr.nextLine());
+            }
+            
+            if(nums > 3)
             {
                 System.out.print("I haven't gotten that far yet, you're just going to have to wait :/ \n");
                 System.out.print("\n");
