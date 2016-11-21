@@ -48,7 +48,7 @@ public class StudentList
         for(int i = 0; i < students.size(); i++)
         {
             Student s = students.get(i);
-            if(s.getStudentLastName().equals(input) || s.getStudentNumberString().equals(input))
+            if(s.getStudentLastName().equals(input) || s.getStudentString().equals(input))
             {
                 System.out.println("\n" s.getStudentCompleteName() + " has been deleted.");
                 students.remove(i);
