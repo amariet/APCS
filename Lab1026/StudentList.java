@@ -1,6 +1,6 @@
 /**
  * Amanda Torres
- * October 26, 2016
+ * November 21, 2016
  */
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -55,6 +55,6 @@ public class StudentList
                 break;
             }
         }
-        System.out.println("Student not found.");
+        System.out.println("Ummm... that student is not alive :/");
     }
 }
