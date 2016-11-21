@@ -17,6 +17,10 @@ public class StudentList
     
     public void addStudentToList()
     {
+        if(students.size() > 0)
+        {
+            String terminate = scr.nextLine();
+        }
         String name;
         int id;
         double gpa;
@@ -37,5 +41,20 @@ public class StudentList
             Student stu = students.get(i);
             System.out.println("Name: " + stu.getCompleteName() + "Student ID: " + stu.getID() + "Student GPA: " + stu.getGPA());
         }
+    }
+    
+    public void deleteStudentFromList()
+    {
+        for(int i = 0; i < students.size(); i++)
+        {
+            Student s = students.get(i);
+            if(s.getStudentLastName().equals(input) || s.getStudentNumberString().equals(input))
+            {
+                System.out.println("\n" s.getStudentCompleteName() + " has been deleted.");
+                students.remove(i);
+                break;
+            }
+        }
+        System.out.println("Student not found.");
     }
 }
