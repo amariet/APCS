@@ -34,10 +34,26 @@ public class StudentListRunner
                 sl.deleteStudentFromList(scr.nextLine());
             }
             
-            if(nums > 3)
+            if(nums == 4)
             {
-                System.out.print("I haven't gotten that far yet, you're just going to have to wait :/ \n");
-                System.out.print("\n");
+                System.out.print("Edit a student ! Enter a last name or an ID: ");
+                sl.editStudentList(scr.nextLine());
+            }
+            
+            if(nums == 5)
+            {
+                sl.deleteStudentList();
+            }
+            
+            if(nums == 6)
+            {
+                System.out.print("Search for a student ! Enter a last name or an ID: ");
+                sl.SearchStudent(scr.nextLine());
+            }
+            
+            if(nums == 7)
+            {
+                sl.filterSearchStudentList();
             }
             String s = scr.nextLine();
             nums = menuNumber();
@@ -47,18 +63,22 @@ public class StudentListRunner
     public static int menuNumber()
     {
         Scanner scr = new Scanner(System.in);
-        String[] menu = new String[3];
+        String[] menu = new String[7];
         menu[0] = "Add a student !";
         menu[1] = "Print Student List !";
         menu[2] = "Delete Student !";
+        menu[3] = "Edit a Student !";
+        menu[4] = "Delete Student List !";
+        menu[5] = "Search for a Student !";
+        menu[6] = "Filter Students !";
         
-        System.out.println("Choose an option from the menu by typing its corresponding number or just type 'quit' to quit :( !");
+        System.out.println("Choose an option from the menu by typing its corresponding number or type 'quit' to quit :( !");
         for(int i = 0; i < menu.length; i++)
         {
             System.out.println(i + 1 + " " + menu[i]);
         }
-        boolean ayylmao = true;
-        while(ayylmao)
+        boolean clear = true;
+        while(clear)
         {
             if(scr.hasNext("quit"))
             {
