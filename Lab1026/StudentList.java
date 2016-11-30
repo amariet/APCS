@@ -110,7 +110,7 @@ public class StudentList
         return null;
     }
     
-    public void clearStudentList()
+    public void deleteStudentList()
     {
         students.clear();
         System.out.println("All students have been executed at your will.");
