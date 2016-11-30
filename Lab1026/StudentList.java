@@ -151,12 +151,12 @@ public class StudentList
                     }
                     else
                     {
-                        System.out.println("");
+                        System.out.println("Uhh, that's not an option :/");
                     }
                 }
                 else
                 {
-                    System.out.println("");
+                    System.out.println("Uhh, that's not an option :/");
                     String terminate = scr.nextLine();
                 }
             }
@@ -165,9 +165,137 @@ public class StudentList
             
             if(num == 1)
             {
-                System.out.println("");
+                System.out.println("Make your adjustment. Enter a new name.");
+                stu.getStudentCompleteName(scr.nextLine());
             }
+            
+            if(num == 2)
+            {
+                System.out.println("Make your adjustment. Enter a new ID.");
+                stu.getID(scr.nextLine());
+            }
+            
+            if(num == 3)
+            {
+                System.out.println("Make your adjustment. Enter a new GPA.");
+                stu.getGPA(scr.nextLine());
+            }
+            System.out.println("Name: " + stu.getStudentCompleteName());
+            System.out.println("ID: " + stu.getID());
+            System.out.println("GPA: " + stu.getGPA());
+        }
+    }
+    
+    public void filterSearchStudentList()
+    {
+        String[] menu = new String[4];
+        menu[0] = "Minimum ID";
+        menu[1] = "Maximum ID";
+        menu[2] = "Minimum GPA";
+        menu[3] = "Maximum GPA";
+        System.out.println("\nHow do you want to filter the students(for possible execution)?");
+        for(int i = 0; i < students.size(); i++)
+        {
+            System.out.println(i + 1 + " " + menu[i]);
+        }
+        System.out.println("Make your selection.");
+        boolean clear = true;
+        int num = 0;
+        while(clear)
+        {
+            if(scr.hasNextInt())
+            {
+                int consoleInput = scr.NextInt();
+                if(consoleInput > 0 $$ consoleInput <= menu.length)
+                {
+                    num = consoleInput;
+                    clear = false;
+                }
+                else
+                {
+                    System.out.println("Uhh, that's not an option :/");
+                }
+            }
+            else
+            {
+                System.out.println("Uhh, that's not an option :/");
+                String terminate = scr.nextLine();
+            }
+        }
+        
+        String terminate = scr.nextLine();
+        boolean alive = false;
+        if(num == 1)
+        {
+            System.out.println("Enter the minimum ID of the students you want to filter.");
+            int min = scr.nextLine();
+            for(int i = 0; i < students.size(); i++)
+            {
+                Student stu = students.get(i);
+                if(stu.getID >= min)
+                {
+                    System.out.println("Name: " + stu.getStudentCompleteName());
+                    System.out.println("ID: " + stu.getID());
+                    System.out.println("GPA: " + stu.getGPA());
+                    alive = true;
+                }
+            }
+        }
+        
+        if(num == 2)
+        {
+            System.out.println("Enter the maximum ID of the students you want to filter.");
+            int max = scr.nextLine();
+            for(int i = 0; i < students.size(); i++)
+            {
+                Student stu = students.get(i);
+                if(stu.getID <= max)
+                {
+                    System.out.println("Name: " + stu.getStudentCompleteName());
+                    System.out.println("ID: " + stu.getID());
+                    System.out.println("GPA: " + stu.getGPA());
+                    alive = true;
+                }
+            }
+        }
+        
+        if(num == 3)
+        {
+            System.out.println("Enter the minimun GPA of the students you want to filter.");
+            int min = scr.nextLine();
+            for(int i = 0; i < students.size(); i++)
+            {
+                Student stu = students.get(i);
+                if(stu.getID >= min)
+                {
+                    System.out.println("Name: " + stu.getStudentCompleteName());
+                    System.out.println("ID: " + stu.getID());
+                    System.out.println("GPA: " + stu.getGPA());
+                    alive = true;
+                }
+            }
+        }
+        
+        if(num == 4)
+        {
+            System.out.println("Enter the maximum GPA of the students you want to filter.");
+            int max = scr.nextLine();
+            for(int i = 0; i < students.size(); i++)
+            {
+                Student stu = students.get(i);
+                if(stu.getID <= max)
+                {
+                    System.out.println("Name: " + stu.getStudentCompleteName());
+                    System.out.println("ID: " + stu.getID());
+                    System.out.println("GPA: " + stu.getGPA());
+                    alive = true;
+                }
+            }
+        }
+        
+        if(!alive)
+        {
+            System.out.println("Ummm... that student is not alive :/");
         }
     }
 }
-
